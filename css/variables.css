@@ -1,0 +1,10 @@
+:root {
+	--widget-color: #056608;
+	--color-white: #fff;
+	--color-white-70: rgba(255,255,255,0.7);
+	--color-dark-blue: #101535;
+	--color-blue: #4328B7;
+	--color-light-blue: #c539fa;
+	--font-family-primary: 'Titillium Web', sans-serif;
+	--font-family-secondary: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,37 @@
+.footer-wrapper{
+    position: relative;
+}
+.footer-wrapper .footer{
+    padding: 30px;
+    background-color: #001924;
+    color: rgba(255,255,255, .8);
+    font-size: 14px;
+}
+
+.footer-wrapper p {
+    color: rgba(255,255,255, .5);
+    line-height: 2;
+    letter-spacing: 0.010em;
+}
+
+.footer-wrapper ul {
+    list-style: none;
+}
+.footer-wrapper ul li {
+    display: inline-block;
+    padding-right: 20px;
+}
+.footer-wrapper ul li:last-of-type{
+    padding-right: 0px;
+}
+
+.footer-wrapper ul li a {
+    display: inline-block;
+    pad: 0px 15px;
+}
+
+@media (min-width: 768px){
+    .footer-wrapper .footer{
+        padding: 60px 0px;
+    }
+}

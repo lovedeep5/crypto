@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Titillium+Web:wght@300;400;600;700&display=swap');
+@import './css/variables.css';
+@import './css/header.css';
+@import './css/banner.css';
+@import './css/aff-logo.css';
+@import './css/services.css';
+@import './css/steps.css';
+@import './css/testimonials.css';
+@import './css/faq.css';
+@import './css/footer.css';
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-family-secondary);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+	max-width: 1920px;
+	margin: 0 auto;
+	scroll-behavior: smooth;
+}
+.img-container {
+	display: block;
+	text-align: center;
+}
+.credit-wrapper {
+	background-color: #161616;
+	padding: 10px 0px;
+	
+}
+.credit-info, .credit-info a {
+	color: rgba(255,255,255,0.4);
+	font-size: 14px;
+}
+
+
+.content {
+	margin-top: 2em;
+	padding: 1em 0px;
+}

@@ -1,0 +1,69 @@
+.banner-wrapper {
+	background-image: url('../images/banner/crypto-partical-image.png');
+	background-size: cover;
+	background-color: var(--color-dark-blue);
+	background-attachment: fixed;
+
+}
+.banner-wrapper .banner {
+
+	background-image: url('../images/banner/crypto_banner_image.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	padding: 100px 15px;
+
+}
+
+.banner-wrapper .banner-content-title{
+	color: var(--color-white);
+	display: block;
+	font-family: var(--font-family-primary);
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 1.4;
+
+}
+
+.banner-wrapper .banner-content-copy{
+	color: var(--color-white);
+	display: block;
+	font-family: var(--font-family-secondary);
+	font-weight: 400;
+	font-size: 1rem;
+	text-align: center;
+	padding-bottom: 15px;
+
+}
+
+.banner-wrapper [class*=col-]{
+	padding-bottom: 10px;
+}
+
+@media (min-width: 768px){
+	.banner-wrapper [class*=col-]{
+		padding-bottom: 20px;
+	}
+	.banner-wrapper .banner-content-title{
+		font-size: 2.5rem;
+	}
+	.banner-wrapper .banner-content-copy{
+		font-size: 1.3rem;
+	}	
+}
+
+@media (min-width: 992px){
+
+	.banner-wrapper .banner {
+		padding-bottom: 300px;
+	}
+	
+	.banner-wrapper .banner-content-title{
+		font-size: 3.3rem;
+	}
+	.banner-wrapper .banner-content-copy{
+		font-size: 1.3rem;
+	}	
+}

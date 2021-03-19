@@ -1,0 +1,115 @@
+.services-wrapper{
+    position: relative;
+
+}
+.services-wrapper .services {
+    background: var(--color-dark-blue);
+    padding: 40px 0px;
+}
+
+.services-wrapper .services-title {
+    color: var(--color-white);
+    position: relative;
+    display: block;
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.050em;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.services-wrapper .services-title::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    background: var(--color-blue);
+    bottom: -20px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.services-wrapper p {
+    color: var(--color-white);
+    display: block;
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    line-height: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-wrapper .services-btn {
+    display: block;
+    text-align: center;
+    padding: 25px 0px;
+}
+.services-wrapper .services-btn a {
+    color: var(--color-white);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background: var(--color-light-blue);
+    text-transform: uppercase;
+    padding: 0px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+    font-weight: 600;
+}
+
+.services-wrapper .row:first-of-type{
+    margin-bottom: 20px;
+}
+
+.services-wrapper .service-inner {
+    border: 2px solid var(--color-blue);
+    background: rgba(60,60,200,0.2);
+    padding: 15px 10px;
+    box-shadow: 0px 2px 60px 0px rgb(60 60 200 / 40%);
+    margin: 0px 15px;
+}
+
+.services-wrapper .service-img {
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.services-wrapper .service-title {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.100em;
+    padding-bottom: 15px;
+}
+.services-wrapper .service-copy {
+    color: var(--color-white-70);
+    display: block;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.025em;
+    font-size: 0.9rem;
+}
+.services-wrapper  .row [class*=col-]:not(:last-of-type){
+	margin-bottom: 20px;
+}
+
+@media (min-width: 768px){
+    .services-wrapper .service-inner {
+        margin: 0px 5px;
+    }
+    .services-wrapper .services-title {
+        font-size: 2.3rem;
+    }
+    .services-wrapper .services-btn {
+        padding: 40px 0px;
+    }
+}

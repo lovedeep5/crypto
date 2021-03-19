@@ -1,0 +1,17 @@
+.aff-logo-wrapper {
+    position: relative;
+}
+.aff-logo-wrapper .aff-logo{
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.aff-logo-wrapper .row [class*=col-]:not(:last-of-type){
+	margin-bottom: 20px;
+}
+
+@media (min-width:768px){
+    .aff-logo-wrapper .row [class*=col-]:not(:last-of-type){
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,120 @@
+.steps-wrapper{
+    position: relative;
+
+}
+.steps-wrapper .steps {
+    background: var(--color-dark-blue);
+    padding: 40px 0px;
+}
+
+.steps-wrapper .steps-title {
+    color: var(--color-white);
+    position: relative;
+    display: block;
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.050em;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.steps-wrapper .steps-title::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    background: var(--color-blue);
+    bottom: -20px;
+    position: relative;
+    display: block;
+    
+}
+
+.steps-wrapper p {
+    color: var(--color-white);
+    display: block;
+    text-align: left;
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    line-height: 2;
+    max-width: 800px;
+    
+}
+
+.steps-wrapper .steps-btn {
+    display: block;
+    text-align: center;
+    padding: 25px 0px;
+}
+.steps-wrapper .steps-btn a {
+    color: var(--color-white);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background: var(--color-light-blue);
+    text-transform: uppercase;
+    padding: 0px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+    font-weight: 600;
+}
+
+.steps-wrapper .row:first-of-type{
+    margin-bottom: 20px;
+}
+
+.steps-wrapper .step-inner {
+    border: 2px solid var(--color-blue);
+    background: rgba(60,60,200,0.2);
+    display: flex;
+    padding: 15px 10px;
+    box-shadow: 0px 2px 60px 0px rgb(60 60 200 / 40%);
+    margin: 0px 15px;
+}
+
+.steps-wrapper .step-img {
+    display: block;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.steps-wrapper .step-title {
+    display: block;
+    color: var(--color-white);
+    text-align: left;
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.100em;
+    padding-bottom: 15px;
+}
+.steps-wrapper .step-copy {
+    color: var(--color-white-70);
+    display: block;
+    text-align: left;
+    line-height: 2;
+    letter-spacing: 0.025em;
+    font-size: 0.9rem;
+}
+.steps-wrapper  .row [class*=col-]:not(:last-of-type){
+	margin-bottom: 20px;
+}
+.steps-wrapper .step-img img {
+    max-width: 50px;
+    padding-right: 10px;
+}
+
+@media (min-width: 768px){
+    .steps-wrapper .step-inner {
+        margin: 0px 5px;
+    }
+    .steps-wrapper .steps-title {
+        font-size: 2.3rem;
+    }
+    .steps-wrapper .steps-btn {
+        padding: 40px 0px;
+    }
+}

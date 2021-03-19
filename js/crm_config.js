@@ -1,0 +1,115 @@
+$(document).ready(function(){
+
+    // Your code in here
+  $("form").submit(function(e){
+    e.preventDefault();
+var first_name = $("[name='first-name']").val();
+var last_name = $("[name='last-name']").val();
+var email = $("[name='email']").val();
+var phone = $("[name='phone']").val();
+var countryCode = $("[name='country-code']").val().toUpperCase();
+alert(phone);
+let obj = {
+  firstname : first_name,
+  lastname : last_name,
+  email: email,
+  phone: phone,
+  country: countryCode     
+}
+
+
+    submitFormToPlatform(obj);
+})
+
+//
+
+//UPDATE line 17,18,19,73,77.
+
+var allowSend=true;
+function getQueryVariable(variable)
+{
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0;i<vars.length;i++) {
+           var pair = vars[i].split("=");
+           if(pair[0] == variable){return pair[1];}
+   }
+   return(false);
+}
+
+function submitFormToPlatform(obj){
+var newLead={
+    "affiliateId": 1664, //Insert default affiliateId
+    "campaignId": 1073,
+    "offerId": 54,
+    "funnelname":"",
+    "funnellink":"",
+    "firstname":obj.firstname,
+    "lastname":obj.lastname,
+    "email":obj.email,
+    "phonenumber":obj.phone,
+    "countrycode":obj.country
+}
+var affiliateId=getQueryVariable("afid");
+if(affiliateId){
+    newLead.affiliateId=affiliateId;
+}
+var utmTerm=getQueryVariable("utm_term");
+if(utmTerm){
+    newLead.clickId=utmTerm;
+}
+var utm_campaign=getQueryVariable("utm_campaign");
+if(utm_campaign){
+    newLead.pixel=utm_campaign;
+}
+
+if(newLead.firstname.match(/^(\S+)\s(.*)/)===null){
+newLead.lastname='';
+newLead.fullname=newLead.firstname;
+}
+else{
+  var fullname=newLead.firstname;
+newLead.firstname=fullname.match(/^(\S+)\s(.*)/).slice(1)[0];
+  newLead.lastname=fullname.match(/^(\S+)\s(.*)/).slice(1)[1];
+  newLead.fullname=newLead.firstname+' '+newLead.lastname;
+}
+if(newLead.lastname===''){
+newLead.lastname=newLead.firstname;
+}
+
+if(!allowSend){
+  console.log('Already sent');
+  return true;
+}
+allowSend=false;
+newLead=JSON.stringify(newLead);
+$.ajax({
+    url: "https://afnetwork.herokuapp.com/api/leads",
+    type: "post",
+    
+    headers:{
+        
+    },
+    data: newLead,
+    dataType: "json",
+    contentType: "application/json",
+    success: function(data) {
+      console.log(data);
+     window.location="/thank-you/"; //Insert success link
+    },
+    error: function(data) {
+      console.log(data);
+     window.location="/error/"; //Insert error link
+      if (data.status === 403 || data.status === 400) {
+        
+      }
+    }
+  });
+
+}
+
+
+
+})
+
+
