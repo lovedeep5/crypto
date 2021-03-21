@@ -35,8 +35,8 @@ function getIP(){
 
 
 // set endpoint and your access key
-function getDetails(ip){
-    var ip = '103.149.154.224'
+function getDetails(userIP){
+    var ip = userIP
 var access_key = '318462090f02650f71c709fd36ea72f9';
 
 // get the API result via jQuery.ajax
@@ -49,7 +49,7 @@ $.ajax({
         var country_calling_code = json.location.calling_code;
         var country_code = json.country_code;
         var country_flag_url = json.location.country_flag;
-        
+        $(".country-flag img").attr('src', country_flag_url);
         $('[name=country-code]').val(country_code);
         $('[name=phone]').val("+"+country_calling_code);
         $('[name=phone]').css({
@@ -66,6 +66,9 @@ $.ajax({
 
 
 getIP();
+
+
+
 
     // DOCUMENT READY
 })

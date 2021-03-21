@@ -8,7 +8,6 @@ var last_name = $("[name='last-name']").val();
 var email = $("[name='email']").val();
 var phone = $("[name='phone']").val();
 var countryCode = $("[name='country-code']").val().toUpperCase();
-alert(phone);
 let obj = {
   firstname : first_name,
   lastname : last_name,
@@ -95,11 +94,11 @@ $.ajax({
     contentType: "application/json",
     success: function(data) {
       console.log(data);
-     window.location="/thank-you/"; //Insert success link
+     window.location="/thank-you.html"; //Insert success link
     },
     error: function(data) {
       console.log(data);
-     window.location="/error/"; //Insert error link
+     window.location="/error.html"; //Insert error link
       if (data.status === 403 || data.status === 400) {
         
       }

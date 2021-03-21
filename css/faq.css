@@ -43,6 +43,7 @@ content: "";
 }
 .faq-wrapper .card-body {
     background-color: var(--color-dark-blue);
+    color: var(--color-white);
 }
 .faq-wrapper button {
     font-family: var(--font-family-primary);
