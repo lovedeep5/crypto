@@ -50,6 +50,7 @@ align-items: center;
 	max-width: 100px;
 	border-radius: none;
 }
+
 @media (min-width: 768px){
 	.header-wrapper .country-flag {
 		display: flex;

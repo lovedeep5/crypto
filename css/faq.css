@@ -51,6 +51,36 @@ content: "";
     letter-spacing: 0.100em;
 }
 
+.faq-wrapper .card-header {
+    position: relative;
+}
+
+
+
+.faq-wrapper .card-header button.collapsed:after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.faq-wrapper .card-header button:after {
+    content: "-";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    
+}
+
 @media (min-width: 768px){
     .faq-wrapper .divider{
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiMxMDE1MzUiPjxwYXRoIGQ9Ik02NDAgMTQwTDEyODAgMEgweiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik02NDAgOThsNjQwLTk4SDB6Ii8+PC9nPjwvc3ZnPg==);
