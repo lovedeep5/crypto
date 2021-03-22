@@ -62,16 +62,8 @@ if(utm_campaign){
     newLead.pixel=utm_campaign;
 }
 
-if(newLead.firstname.match(/^(\S+)\s(.*)/)===null){
-newLead.lastname='';
-newLead.fullname=newLead.firstname;
-}
-else{
-  var fullname=newLead.firstname;
-newLead.firstname=fullname.match(/^(\S+)\s(.*)/).slice(1)[0];
-  newLead.lastname=fullname.match(/^(\S+)\s(.*)/).slice(1)[1];
-  newLead.fullname=newLead.firstname+' '+newLead.lastname;
-}
+
+
 if(newLead.lastname===''){
 newLead.lastname=newLead.firstname;
 }
