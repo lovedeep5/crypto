@@ -22,33 +22,24 @@ function ChangeNumber(){
     $('.dynamic-content-line-2').text("$"+Math.floor(Math.random()*1000/2));
 }
 
-// GETTING COUNTRY CODE WITH IP
+function getDetails(){
 
-
-
-function getIP(){
-    $.get("http://ip-api.com/json/", function(data, status){
-    console.log({ip:data.query});
-    getDetails(data.query);
-  });
-};
-
-
-// set endpoint and your access key
-function getDetails(userIP){
-    var ip = userIP
-var access_key = '318462090f02650f71c709fd36ea72f9';
-
-// get the API result via jQuery.ajax
-$.ajax({
-    url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,   
-    dataType: 'jsonp',
-    success: function(json) {
-
-        // output the "capital" object inside "location"
-        var country_calling_code = json.location.calling_code;
-        var country_code = json.country_code;
-        var country_flag_url = json.location.country_flag;
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://ip-geo-location.p.rapidapi.com/ip/check?format=json",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "1d68f3ebffmshfb94a56fb52803dp1590f2jsn07b0b9c8ae2b",
+            "x-rapidapi-host": "ip-geo-location.p.rapidapi.com"
+        }
+    };
+    
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        var country_calling_code = response.country.phone_code;
+        var country_code = response.country.code;
+        var country_flag_url = response.country.flag.file;
         $(".country-flag img").attr('src', country_flag_url);
         $('[name=country-code]').val(country_code);
         $('[name=phone]').val("+"+country_calling_code);
@@ -58,17 +49,20 @@ $.ajax({
             "background-position": "right",
             "background-repeat": "no-repeat"
         });
-        
-    }
-});
+
+
+    });
+   
+
+
 
 }
 
 
-getIP();
 
 
 
+getDetails();
 
     // DOCUMENT READY
 })
