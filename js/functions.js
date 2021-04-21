@@ -42,15 +42,8 @@ function getDetails(){
         var country_flag_url = response.country.flag.file;
         $(".country-flag img").attr('src', country_flag_url);
         $('[name=country-code]').val(country_code);
-        $('[name=phone]').val("+"+country_calling_code);
-        $('[name=phone]').css({
-            "background-image": "url("+ country_flag_url +")",
-            "background-size": "50px",
-            "background-position": "right",
-            "background-repeat": "no-repeat"
-        });
-
-
+        $('[name=country-dailing-code]').val("+" + country_calling_code);
+    
     });
    
 

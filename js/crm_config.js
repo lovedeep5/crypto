@@ -6,13 +6,14 @@ $(document).ready(function(){
 var first_name = $("[name='first-name']").val();
 var last_name = $("[name='last-name']").val();
 var email = $("[name='email']").val();
-var phone = $("[name='phone']").val();
+var phone_number = $("[name='phone']").val();
+var dailing_code = $("[name='country-dailing-code']").val();
 var countryCode = $("[name='country-code']").val().toUpperCase();
 let obj = {
   firstname : first_name,
   lastname : last_name,
   email: email,
-  phone: phone,
+  phone: (dailing_code +""+ phone_number),
   country: countryCode     
 }
 
@@ -86,11 +87,11 @@ $.ajax({
     contentType: "application/json",
     success: function(data) {
       console.log(data);
-     window.location="/thank-you.html"; //Insert success link
+    
     },
     error: function(data) {
       console.log(data);
-     window.location="/error.html"; //Insert error link
+
       if (data.status === 403 || data.status === 400) {
         
       }

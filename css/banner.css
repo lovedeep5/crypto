@@ -42,6 +42,14 @@
 	padding-bottom: 10px;
 }
 
+.col-sm.phone-container {
+    display: flex;
+}
+.col-sm.phone-container input:first-of-type{
+	flex: 30%;
+	max-width: 200px;
+}
+
 @media (min-width: 768px){
 	.banner-wrapper [class*=col-]{
 		padding-bottom: 20px;
