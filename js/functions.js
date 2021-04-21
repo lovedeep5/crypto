@@ -51,11 +51,10 @@ function getDetails(){
 
 }
 
-
-
-
-
 getDetails();
+
+
+
 
     // DOCUMENT READY
 })

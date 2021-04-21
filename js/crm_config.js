@@ -87,11 +87,11 @@ $.ajax({
     contentType: "application/json",
     success: function(data) {
       console.log(data);
-    
+     window.location="/thank-you.html"; //Insert success link
     },
     error: function(data) {
       console.log(data);
-
+    //  window.location="/error.html"; //Insert error link
       if (data.status === 403 || data.status === 400) {
         
       }
